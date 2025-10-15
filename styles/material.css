@@ -29,8 +29,8 @@
 
 @font-face {
     font-family: Sauce;
-    src: url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf),
-    url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf);
+    src: url(./Sauce.Sans.ttf),
+    url(./Sauce.Sans.ttf);
 }
 
 .sauce {
