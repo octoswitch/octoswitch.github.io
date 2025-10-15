@@ -52,6 +52,20 @@
             margin-bottom: 40px;
             z-index: 900;
         }
+
+        @font-face {
+            font-family: Sauce;
+            src: url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf),
+            url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf);
+        }
+
+        .sauce {
+            font-family: Sauce;
+        }
+
+        .block {
+            display:block !important;
+        }
     </style>
 </head>
 
@@ -61,9 +75,9 @@
     </div>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header glass-element">
-            <a role="button" tabindex="0" class="mdl-layout__drawer-button" href="./index.html"><i class="material-icons">home</i></a>
             <div class="mdl-layout__header-row">
-                <span class="mdl-layout__title">Octoswitch</span>
+                <span class="mdl-layout__title sauce block">Octoswitch</span>
+                <span class="mdl-layout__title block"> - Innovative products for Home Defense and Entertainment</span>
             </div>
         </header>
 
@@ -72,21 +86,29 @@
                 <!-- Title -->
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp glass-card">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">OCTOPLEX™</h2>
+                        <h2 class="mdl-card__title-text">Introducing</h2>
+                        <div class="mdl-card__title-text sauce" style="padding-left:1rem">OCTOPLEX™</div>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <p>
-                            Hides unsightly holes
-                        </p>
-                        <p>
-                            Confuses attackers and unwanted guests
-                        </p>
-                        <p>
-                            Eliminates boredom in the bathroom
-                        </p>
+                        HIDES unsightly holes
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="./images/vanity-1.png" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        CONFUSES attackers and unwelcome visitors
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="./images/vanity-2.png" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        ELIMINATES boredom in the bathroom
+                    </div>
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="./images/vanity-1.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__actions">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="./images/bike-rack-watermark.pdf" target="_blank">Get the OCTOPLEX</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://www.thingiverse.com/thing:7168509" target="_blank">Get the OCTOPLEX</a>
                     </div>
                 </div>
                 <!-- Screenshots -->
@@ -106,19 +128,25 @@
                     <div class="mdl-card__media">
                         <img class="article-image" src="./images/step-3.png" border="0" alt="">
                     </div>
+                    <div class="mdl-card__actions">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="mailto:customerservice@octoplex.io" target="_blank">Contact customer support</a>
+                    </div>
                 </div>
             </div>
 
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">© 2025 Max Davy</div>
+                    <ul class="mdl-mini-footer__link-list">
+                        <li>© 2025 Max Davy</li>
+                        <li><a href="https://max.davy.engineer" target=_blank class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">Check out my other creations</a></li>
+                    </ul>
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
-                        <li>Created using:</li>
-                        <li><a href="https://pages.github.com" target=_blank>Github Pages</a></li>
-                        <li><a href="https://getmdl.io" target="_blank">Material Design Lite</a></li>
-                        <li><a href="https://vscodium.com/" target="_blank">VSCodium</a></li>
+                        <li>Created with:</li>
+                        <li><a href="https://pages.github.com" target=_blank class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">Github Pages</a></li>
+                        <li><a href="https://getmdl.io" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">Material Design Lite</a></li>
+                        <li><a href="https://vscodium.com/" target="_blank" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent">VSCodium</a></li>
                     </ul>
                 </div>
             </footer>
