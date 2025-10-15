@@ -32,41 +32,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="./styles/material.css" />
-    <style>
-        #view-source {
-            position: fixed;
-            display: block;
-            right: 0;
-            bottom: 0;
-            margin-right: 40px;
-            margin-bottom: 40px;
-            z-index: 900;
-        }
-
-        @font-face {
-            font-family: Sauce;
-            src: url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf),
-            url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf);
-        }
-
-        .sauce {
-            font-family: Sauce;
-            padding-left:1rem;
-            padding-right:1rem
-        }
-
-        .mdl-layout__header-column {
-            padding-bottom: 1em;
-            padding-top:1em
-        }
-
-        .portfolio-logo {
-            background-size:contain;
-        }
-        .half-width {
-            width:50% !important;
-        }
-    </style>
 </head>
 
 <body>
@@ -95,8 +60,12 @@
                         HIDES unsightly holes
                     </div>
                     <div class="mdl-card__media">
-                        <img class="article-image half-width" src="./images/vanity-1-before.png" border="0" alt="">
-                        <img class="article-image half-width" src="./images/vanity-1-after.png" border="0" alt="">
+                        <div class="column">
+                            <img class="article-image" src="./images/vanity-1-before.png" border="0" alt="">
+                        </div>
+                        <div class="column">
+                            <img class="article-image" src="./images/vanity-1-after.png" border="0" alt="">
+                        </div>
                     </div>
                     <div class="mdl-card__supporting-text">
                         CONFUSES attackers and unwelcome visitors
@@ -112,7 +81,7 @@
                     </div>
                     <div class="mdl-card__actions">
                         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="https://www.thingiverse.com/thing:7168509" target="_blank">Get the OCTOPLEX</a>
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="./octoplex-instructions.html" target="_blank">View installation instructions</a>
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="./octoplex-instructions.html">View installation instructions</a>
                     </div>
                 </div>
             </div>

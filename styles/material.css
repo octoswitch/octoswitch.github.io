@@ -13,7 +13,50 @@
  * @license Apache-2.0
  */
 
+ 
+
 @charset "UTF-8";
+
+#view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+@font-face {
+    font-family: Sauce;
+    src: url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf),
+    url(https://github.com/Max-Davy/Sauce-Sans/releases/latest/download/Sauce.Sans.ttf);
+}
+
+.sauce {
+    font-family: Sauce;
+    padding-left:1rem;
+    padding-right:1rem
+}
+
+.mdl-layout__header-column {
+    padding-bottom: 1em;
+    padding-top:1em
+}
+
+.portfolio-logo {
+    background-size:contain;
+}
+
+.mdl-card__media {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.column{
+    width:50%;
+    float:left;
+}
+
 html {
     color: rgba(0, 0, 0, .87)
 }
