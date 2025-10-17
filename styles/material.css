@@ -34,7 +34,7 @@
 }
 
 .sauce {
-    font-family: Sauce;
+    font-family: Sauce !important;
     padding-left:1rem;
     padding-right:1rem
 }
