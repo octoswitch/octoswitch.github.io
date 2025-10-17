@@ -41,11 +41,10 @@
 
 .mdl-layout__header-column {
     padding-bottom: 1em;
-    padding-top:1em
 }
 
 .portfolio-logo {
-    background-size:contain;
+    background-size:contain !important;
 }
 
 .mdl-card__media {
