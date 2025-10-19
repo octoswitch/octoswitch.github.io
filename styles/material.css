@@ -17,45 +17,6 @@
 
 @charset "UTF-8";
 
-#view-source {
-    position: fixed;
-    display: block;
-    right: 0;
-    bottom: 0;
-    margin-right: 40px;
-    margin-bottom: 40px;
-    z-index: 900;
-}
-
-@font-face {
-    font-family: Sauce;
-    src: url(./Sauce.Sans.ttf),
-    url(./Sauce.Sans.ttf);
-}
-
-.sauce {
-    font-family: Sauce !important;
-    padding-left:1rem;
-    padding-right:1rem
-}
-
-.mdl-layout__header-column {
-    padding-bottom: 1em;
-}
-
-.portfolio-logo {
-    background-size:contain !important;
-}
-
-.mdl-card__media {
-    background-color: rgba(0,0,0,0) !important;
-}
-
-.column{
-    width:50%;
-    float:left;
-}
-
 html {
     color: rgba(0, 0, 0, .87)
 }
@@ -110,14 +71,14 @@ textarea {
 }
 
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important
 }
 
 .visuallyhidden.focusable:active,
@@ -3085,7 +3046,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-button--fab {
-    border-radius: 50%;
+    border-radius: 50% !important;
     font-size: 24px;
     height: 56px;
     margin: auto;
@@ -3099,7 +3060,8 @@ input.mdl-button[type="submit"] {
     line-height: normal
 }
 
-.mdl-button--fab .material-icons {
+.mdl-button--fab .material-icons,
+.mdl-button--fab .material-symbols-outlined {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -3116,7 +3078,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-button--fab .mdl-button__ripple-container {
-    border-radius: 50%;
+    border-radius: 50% !important;
     -webkit-mask-image: -webkit-radial-gradient(circle, #fff, #000);
     mask-image: radial-gradient(circle, #fff, #000);
 }
@@ -3224,7 +3186,7 @@ input.mdl-button[type="submit"] {
 }
 
 .mdl-button--accent.mdl-button--accent {
-    color: rgb(83, 109, 254)
+    color: rgb(100,123,254)
 }
 
 .mdl-button--accent.mdl-button--accent .mdl-ripple {
@@ -6881,15 +6843,17 @@ fieldset[disabled] .mdl-textfield .mdl-textfield__label,
     line-height: 14px;
     max-width: 170px;
     position: fixed;
-    top: -500px;
-    left: -500px;
+    bottom: 45px !important;/*normally top -500*/
+    right: 25px !important;/*normally left -500*/
     padding: 8px;
-    text-align: center
+    text-align: center;
+    z-index:1000;
 }
 
 .mdl-tooltip.is-active {
     -webkit-animation: pulse 200ms cubic-bezier(0, 0, .2, 1)forwards;
-    animation: pulse 200ms cubic-bezier(0, 0, .2, 1)forwards
+    animation: pulse 200ms cubic-bezier(0, 0, .2, 1)forwards;
+    z-index:1000;
 }
 
 .mdl-tooltip--large {
@@ -7851,6 +7815,68 @@ iframe.heightSet {
 * Glass UI modifications begin
 */
 
+/* Octoswitch Specific */
+
+#view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
+}
+
+@font-face {
+    font-family: Sauce;
+    src: url(./Sauce.Sans.ttf),
+    url(./Sauce.Sans.ttf);
+}
+
+.width-75 {
+    width: 75% !important;
+    height: auto;
+    left: 12.5%;
+    position: relative;
+}
+
+.width-50 {
+    width: 50% !important;
+    height: auto;
+    left: 25%;
+    position: relative;
+}
+
+.sauce {
+    font-family: Sauce !important;
+    padding-left:1rem;
+    padding-right:1rem
+}
+
+.mdl-layout__header-column {
+    padding-bottom: 1em;
+}
+
+.portfolio-logo {
+    background-size:contain !important;
+}
+
+.mdl-card__media {
+    background-color: rgba(0,0,0,0) !important;
+}
+
+.column{
+    width:50%;
+    float:left;
+}
+
+.article-model {
+    width:100%;
+    height:512px;
+}
+
+/* general */
+
 
 main {
     transition-duration: .2s;
@@ -7880,11 +7906,26 @@ main {
 .glass-card {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
+    background-color: rgba(17, 25, 40, 0.15);/* transparency .75 normally */
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.25);/* .35 normally */
+    color: black;/* .white normally */
 }
+
+.mdl-button--fab {
+    position: fixed;
+    bottom:75px;
+    right: 25px;
+}
+
+.mdl-button--lighthighlight {
+    background-color:rgba(255,255,255,.125);
+}
+
+.mdl-button--darkhighlight {
+    background-color:rgba(0,0,0,.125);
+}
+
 
 .glass-element,
 .mdl-mini-footer,
@@ -7892,17 +7933,17 @@ footer,
 .mdl-layout__header {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(17, 25, 40, 0.75);
+    background-color: rgba(17, 25, 40, 0.15);/* transparency .75 normally */
     background-image: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);/* .35 normally */
+    color: black;/* .white normally */
 }
 
 .mdl-card__title-text,
 .mdl-card__supporting-text,
 .mdl-textfield,
 .mdl-textfield__input {
-    color: white;
+    color: black;/* .white normally */
 }
 
 .mdl-textfield__label {
