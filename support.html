@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Octoswitch - Innovatative Solutions for Home Defense and Entertainment">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <title>OCTOPLEX™ - OCTOSWITCH</title>
+    <title>CUSTOMER SUPPORT - OCTOSWITCH</title>
 
     <!-- Tweaks for various OSs:-->
     <!-- Android -->
@@ -17,7 +17,7 @@
     <!-- iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="OCTOPLEX™ - OCTOSWITCH">
+    <meta name="apple-mobile-web-app-title" content="CUSTOMER SUPPORT - OCTOSWITCH">
     <link rel="apple-touch-icon-precomposed" href="/icons/apple-icon-precomposed.png">
 
     <!-- Windows -->
@@ -32,7 +32,31 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link rel="stylesheet" href="./scripts/getmdl-select.min.css">
+    <script defer src="./scripts/getmdl-select.min.js"></script>
     <link rel="stylesheet" href="./styles/material.css" />
+    <script>
+        function formSubmit(event) {
+            var url = "https://formspree.io/f/mkgqevjl";
+            var request = new XMLHttpRequest();
+            request.open('POST', url, true);
+            request.onload = function() { // request successful
+                // we can use server response to our request now
+                document.getElementById("request-status-snackbar").MaterialSnackbar.showSnackbar({message:"Your request was submitted successfully. Our support team will get back to you shortly."});
+            };
+
+            request.onerror = function(e) {
+                document.getElementById("request-status-snackbar").MaterialSnackbar.showSnackbar({message:"Your request was submitted successfully. Our support team will get back to you shortly."});
+            };
+
+            request.send(new FormData(event.target)); // create FormData from form that triggered event
+            event.preventDefault();
+        }
+        
+        window.addEventListener("DOMContentLoaded", (event) => {
+            document.getElementById("customersupportform").addEventListener("submit", formSubmit);
+        });
+    </script>
 </head>
 
 <body>
@@ -54,29 +78,52 @@
                 <!-- Screenshots -->
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp glass-card">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Installing your new </h2>
-                        <div class="mdl-card__title-text sauce" style="padding-left:1rem">OCTOPLEX™</div>
+                        <h2 class="mdl-card__title-text">Contact </h2>
+                        <div class="mdl-card__title-text sauce" style="padding-left:1rem">OCTOSWITCH</div>
+                        <h2 class="mdl-card__title-text">Support</h2>
                     </div>
-                    <div class="mdl-card__supporting-text">PEEL the backing from the damage-free adhesive pads</div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="./images/step-1.png" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__supporting-text">ALIGN the OCTOPLEX™ with the switches and press gently into place</div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="./images/step-2.png" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__supporting-text">SECURE with the included screws</div>
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="./images/step-3.png" border="0" alt="">
-                    </div>
-                    <div class="mdl-card__actions">
-                        <a class="mdl-button mdl-button--colored mdl-button--lighthighlight mdl-js-button mdl-js-ripple-effect" href="./support.html" target="_blank">
-                            <span class="material-symbols-outlined">
-                                contact_support
-                            </span>
-                            Contact customer support</a>
+                    <div class="mdl-card__supporting-text">
+                        <form id="customersupportform">
+                            <div class="mdl-textfield mdl-textfield--block mdl-textfield--full-width mdl-js-textfield">
+                                <input class="mdl-textfield__input" name="Contact Email" type="email" id="email">
+                                <label class="mdl-textfield__label" for="email">Enter your email address</label>
+                                <span class="material-symbols-outlined" id="email-info">
+                                    info
+                                </span>
+                            </div>
+                            
+                            <div class="mdl-tooltip static-tooltip" style="position: fixed;top: 100px;left: 50px;height: 60pt;" data-mdl-for="email-info">
+                                Your email will only be used to contact you regarding this support request. You will not be added to any mailing list and Octoswitch will never share your data with any third party.
+                            </div>
+                            <div class="mdl-textfield mdl-js-textfield getmdl-select">
+                                <input type="text" value="" class="mdl-textfield__input" id="querytype" readonly required>
+                                <input type="hidden" value="" name="querytype" required>
+                                <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                                <label for="querytype" class="mdl-textfield__label">Support Request Type</label>
+                                <ul for="querytype" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                                    <li class="mdl-menu__item" data-val="Damage">Shipping damage</li>
+                                    <li class="mdl-menu__item" data-val="Defect">Defective product</li>
+                                    <li class="mdl-menu__item" data-val="Help">Installation Assistance</li>
+                                    <li class="mdl-menu__item" data-val="Other">Other</li>
+                                </ul>
+                            </div>
+                            <div class="mdl-textfield mdl-textfield--full-width mdl-js-textfield">
+                                <textarea class="mdl-textfield__input" name="Submission Text" type="text" rows="5" id="bodytext" ></textarea>
+                                <label class="mdl-textfield__label" for="bodytext">Describe your issue in detail</label>
+                            </div>
+                            <div class="mdl-card__actions">
+                                <button class="mdl-button mdl-button--colored mdl-button--lighthighlight mdl-js-button mdl-js-ripple-effect" type="submit" target="dummyframe">
+                                    <span class="material-symbols-outlined">send</span>
+                                    Send
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
+            <div id="request-status-snackbar" class="mdl-js-snackbar mdl-snackbar">
+                <div class="mdl-snackbar__text"></div>
+                <button class="mdl-snackbar__action" type="button"></button>
             </div>
 
             <footer class="mdl-mini-footer">
@@ -95,12 +142,6 @@
                     </ul>
                 </div>
             </footer>
-            <button id="SupportButton" style="bottom:25px;" class="mdl-button mdl-button--lighthighlight mdl-js-button mdl-button--fab glass-element" href="./support.html">
-                <i class="material-symbols-outlined">contact_support</i>
-            </button>
-            <div class="mdl-tooltip mdl-tooltip--left" data-mdl-for="SupportButton">
-                Contact Customer Support
-            </div>
         </main>
 
     </div>

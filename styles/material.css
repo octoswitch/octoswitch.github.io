@@ -3224,7 +3224,8 @@ input.mdl-button[type="submit"] {
     color: rgba(0, 0, 0, .26)
 }
 
-.mdl-button .material-icons {
+.mdl-button .material-icons,
+.mdl-button .material-symbols-outlined {
     vertical-align: middle
 }
 
@@ -6692,6 +6693,11 @@ fieldset[disabled] .mdl-switch .mdl-switch__ripple-container .mdl-ripple,
     appearance: textfield;
 }
 
+.mdl-textfield__input[type="email"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
 .mdl-textfield__input[type="number"]::-webkit-inner-spin-button,
 .mdl-textfield__input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -7877,6 +7883,10 @@ iframe.heightSet {
 
 /* general */
 
+
+.mdl-textfield--block {
+    display: block !important;
+}
 
 main {
     transition-duration: .2s;

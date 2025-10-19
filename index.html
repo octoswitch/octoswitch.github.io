@@ -76,7 +76,8 @@
                     </div>
                     <div class="mdl-card__media">
                         <img id="model-preview" class="article-image width-50 visuallyshown" src="./images/vanity-cover.png" border="0" alt="">
-                        <model-viewer id="model" class="article-model visuallyhidden" src="./models/octoplex-assembly.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="poster.webp" shadow-intensity="1" environment-image="legacy" camera-orbit="150.5deg 84.64deg 0.6566m" field-of-view="30deg"> </model-viewer>
+                        <model-viewer id="model" class="article-model visuallyhidden" src="./models/octoplex-assembly.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="neutral" poster="./images/vanity-cover.png" shadow-intensity="1" environment-image="legacy" camera-orbit="144.9deg 83.9deg 0.6566m" field-of-view="30deg">
+                        </model-viewer>
                         <button id="3DButton" class="visuallyshown mdl-button mdl-button--lighthighlight mdl-js-button mdl-button--fab" onclick="show3D()">
                             <i class="material-icons">3d_rotation</i>
                         </button>
@@ -139,6 +140,12 @@
                     </ul>
                 </div>
             </footer>
+            <button id="SupportButton" style="bottom:25px;" class="mdl-button mdl-button--lighthighlight mdl-js-button mdl-button--fab glass-element" href="./support.html">
+                <i class="material-symbols-outlined">contact_support</i>
+            </button>
+            <div class="mdl-tooltip mdl-tooltip--left" data-mdl-for="SupportButton">
+                Contact Customer Support
+            </div>
         </main>
 
     </div>
