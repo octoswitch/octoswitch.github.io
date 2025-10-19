@@ -42,11 +42,11 @@
             request.open('POST', url, true);
             request.onload = function() { // request successful
                 // we can use server response to our request now
-                document.getElementById("request-status-snackbar").MaterialSnackbar.showSnackbar({message:"Your request was submitted successfully. Our support team will get back to you shortly."});
+                document.getElementById("request-status-snackbar").MaterialSnackbar.showSnackbar({message:"Your request was submitted successfully. Our support team will get back to you shortly. You will recieve an automated email confirming your support request."});
             };
 
             request.onerror = function(e) {
-                document.getElementById("request-status-snackbar").MaterialSnackbar.showSnackbar({message:"Your request was submitted successfully. Our support team will get back to you shortly."});
+                document.getElementById("request-status-snackbar").MaterialSnackbar.showSnackbar({message:"Your request was submitted successfully. Our support team will get back to you shortly. You will recieve an automated email confirming your support request."});
             };
 
             request.send(new FormData(event.target)); // create FormData from form that triggered event
